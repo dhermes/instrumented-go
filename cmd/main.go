@@ -8,18 +8,23 @@ import (
 	"github.com/dhermes/instrumented-go/multiplication"
 )
 
+var (
+	stdout *os.File = os.Stdout
+	stderr *os.File = os.Stderr
+)
+
 func run() error {
 	sum := addition.AddFloat64(2.5, 39.5)
-	fmt.Printf("2.5 + 39.5 = %f\n", sum)
+	fmt.Fprintf(stdout, "2.5 + 39.5 = %f\n", sum)
 	product := multiplication.MultiplyInt(3, 14)
-	fmt.Printf("3 × 14 = %d\n", product)
+	fmt.Fprintf(stdout, "3 × 14 = %d\n", product)
 	return nil
 }
 
 func main() {
 	err := run()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "%v\n", err)
+		fmt.Fprintf(stderr, "%v\n", err)
 		os.Exit(1)
 	}
 }

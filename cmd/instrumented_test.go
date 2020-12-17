@@ -7,11 +7,25 @@
 package main
 
 import (
+	"os"
 	"testing"
 )
 
 // TestStub is a unit test that invokes `main()` in the context of a
-// `testint.T` so `go test` can be run and coverage measured.
+// `testing.T` so `go test` can be run and coverage measured.
 func TestStub(t *testing.T) {
 	main()
+}
+
+func TestMain(m *testing.M) {
+	// Swap out `STDOUT` and `STDERR` so our binary does not have output
+	// polluted by the `go test` output.
+	devNull, err := os.Open(os.DevNull)
+	if err != nil {
+		panic(err)
+	}
+	os.Stdout = devNull
+	os.Stderr = devNull
+
+	os.Exit(m.Run())
 }
