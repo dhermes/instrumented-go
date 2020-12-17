@@ -61,7 +61,7 @@
 				
 				<option value="file2">github.com/dhermes/instrumented-go/cmd/main.go (77.8%)</option>
 				
-				<option value="file3">github.com/dhermes/instrumented-go/indirect/identity.go (50.0%)</option>
+				<option value="file3">github.com/dhermes/instrumented-go/indirect/identity.go (25.0%)</option>
 				
 				<option value="file4">github.com/dhermes/instrumented-go/multiplication/float.go (0.0%)</option>
 				
@@ -140,6 +140,16 @@ func main() <span class="cov8" title="1">{
 // IdentityInt is the identity function for integers.
 func IdentityInt(i int) int <span class="cov8" title="1">{
         return i
+}</span>
+
+// IdentityInt64 is the identity function for 64 bit integers.
+func IdentityInt64(i int64) int64 <span class="cov0" title="0">{
+        return i
+}</span>
+
+// IdentityFloat32 is the identity function for 32 bit floating point numbers.
+func IdentityFloat32(f float32) float32 <span class="cov0" title="0">{
+        return f
 }</span>
 
 // IdentityFloat64 is the identity function for 64 bit floating point numbers.
