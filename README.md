@@ -12,6 +12,7 @@ Usage:
    make instrumented-main    Make a custom `main` binary that is instrumented for coverage
    make cover.out            Generate a cover profile for code paths invoked by `cmd/main.go`
    make coverage.html        Generate HTML for the `cmd/main.go` cover profile
+   make clean                Remove all generated files
 
 ```
 
