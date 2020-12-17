@@ -1,0 +1,8 @@
+mode: atomic
+github.com/dhermes/instrumented-go/addition/float.go:4.39,6.2 1 1
+github.com/dhermes/instrumented-go/addition/integer.go:4.27,6.2 1 0
+github.com/dhermes/instrumented-go/cmd/main.go:16.18,22.2 5 1
+github.com/dhermes/instrumented-go/cmd/main.go:24.13,26.16 2 1
+github.com/dhermes/instrumented-go/cmd/main.go:26.16,29.3 2 0
+github.com/dhermes/instrumented-go/multiplication/float.go:4.44,6.2 1 0
+github.com/dhermes/instrumented-go/multiplication/integer.go:4.32,6.2 1 1
