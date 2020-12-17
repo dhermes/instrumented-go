@@ -29,6 +29,8 @@ Usage:
 -   If our binary calls `os.Exit(1)`, the clean-up in `TestMain()` may not
     have a chance to finish writing the `cover.out` file. (This can be fixed
     by invoking the instrumented binary via `os.Exec`.)
+-   Completely **unused** packages (i.e. packages that don't even get brought
+    in to the build for `cmd/main.go`) will not show up in `cover.out`
 
 ## Generated Files
 

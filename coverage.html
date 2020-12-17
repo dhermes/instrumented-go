@@ -61,11 +61,9 @@
 				
 				<option value="file2">github.com/dhermes/instrumented-go/cmd/main.go (77.8%)</option>
 				
-				<option value="file3">github.com/dhermes/instrumented-go/indirect/identity.go (25.0%)</option>
+				<option value="file3">github.com/dhermes/instrumented-go/multiplication/float.go (0.0%)</option>
 				
-				<option value="file4">github.com/dhermes/instrumented-go/multiplication/float.go (0.0%)</option>
-				
-				<option value="file5">github.com/dhermes/instrumented-go/multiplication/integer.go (100.0%)</option>
+				<option value="file4">github.com/dhermes/instrumented-go/multiplication/integer.go (100.0%)</option>
 				
 				</select>
 			</div>
@@ -98,13 +96,9 @@ func AddFloat64(a, b float64) float64 <span class="cov8" title="1">{
 		
 		<pre class="file" id="file1" style="display: none">package addition
 
-import (
-        "github.com/dhermes/instrumented-go/indirect"
-)
-
 // AddInt adds two integers together.
 func AddInt(a, b int) int <span class="cov0" title="0">{
-        return a + indirect.IdentityInt(b)
+        return a + b
 }</span>
 </pre>
 		
@@ -140,30 +134,7 @@ func main() <span class="cov8" title="1">{
 }
 </pre>
 		
-		<pre class="file" id="file3" style="display: none">package indirect
-
-// IdentityInt is the identity function for (plain) integers.
-func IdentityInt(i int) int <span class="cov8" title="1">{
-        return i
-}</span>
-
-// IdentityInt64 is the identity function for 64 bit integers.
-func IdentityInt64(i int64) int64 <span class="cov0" title="0">{
-        return i
-}</span>
-
-// IdentityFloat32 is the identity function for 32 bit floating point numbers.
-func IdentityFloat32(f float32) float32 <span class="cov0" title="0">{
-        return f
-}</span>
-
-// IdentityFloat64 is the identity function for 64 bit floating point numbers.
-func IdentityFloat64(f float64) float64 <span class="cov0" title="0">{
-        return f
-}</span>
-</pre>
-		
-		<pre class="file" id="file4" style="display: none">package multiplication
+		<pre class="file" id="file3" style="display: none">package multiplication
 
 // MultiplyFloat64 multiplies two floating point numbers together.
 func MultiplyFloat64(a, b float64) float64 <span class="cov0" title="0">{
@@ -171,15 +142,11 @@ func MultiplyFloat64(a, b float64) float64 <span class="cov0" title="0">{
 }</span>
 </pre>
 		
-		<pre class="file" id="file5" style="display: none">package multiplication
-
-import (
-        "github.com/dhermes/instrumented-go/indirect"
-)
+		<pre class="file" id="file4" style="display: none">package multiplication
 
 // MultiplyInt multiplies two integers together.
 func MultiplyInt(a, b int) int <span class="cov8" title="1">{
-        return a * indirect.IdentityInt(b)
+        return a * b
 }</span>
 </pre>
 		
