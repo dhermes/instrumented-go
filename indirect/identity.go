@@ -1,6 +1,6 @@
 package indirect
 
-// IdentityInt is the identity function for integers.
+// IdentityInt is the identity function for (plain) integers.
 func IdentityInt(i int) int {
 	return i
 }
