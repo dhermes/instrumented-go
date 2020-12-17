@@ -51,7 +51,7 @@ Usage:
 -   `bincover` [repository][4]
 -   Data [encoding][5] in `cover.out` files
     ```
-    `name.go:line.column,line.column numberOfStatements count`
+    name.go:line.column,line.column numberOfStatements count
     ```
 -   `git blame --porcelain` [format][6]
 
